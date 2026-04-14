@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>言论抗压测试 - 你的网络言论抗压指数是多少？</title>
+  <meta name="description" content="通过20道题测试你对互联网言论的抗压能力，获得专属分析报告。涵盖逻辑、情绪、自知等6个维度。">
+  <meta name="theme-color" content="#0d0d14">
+  
+  <!-- OG 标签 -->
+  <meta property="og:title" content="言论抗压测试">
+  <meta property="og:description" content="你在互联网上能承受多少言论压力？">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">跳过导航到主要内容</a>
+
+  <div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero" id="main">
+      <div class="comment-feed">
+        <div class="fake-comments">
+          <!-- 第一轮评论 -->
+          <div class="fake-comment">嗯这个观点实在太naive了</div>
+          <div class="fake-comment">你这样想真是太幼稚了哈哈</div>
+          <div class="fake-comment">不过我私底下还是挺欣赏你的，加油</div>
+          <div class="fake-comment">这话说得可真是没有任何根据</div>
+          <div class="fake-comment">你的逻辑有问题吧？</div>
+          <div class="fake-comment">哇，真是太勤快了呢</div>
+          <div class="fake-comment">这垃圾东西也能叫作品？</div>
+          <div class="fake-comment">我倒是想看看你怎么解释</div>
+          <div class="fake-comment">算了不跟你说了，太费劲</div>
+          <div class="fake-comment">你们看，又来一个呢</div>
+          <div class="fake-comment">我完全同意楼主的观点</div>
+          <div class="fake-comment">这世界真是疯狂，一切都没有意义</div>
+          <div class="fake-comment">@所有人（艾特大军）</div>
+          <div class="fake-comment">明白对方言外之意真不容易</div>
+          <div class="fake-comment">修图术真是强大啊</div>
+          <!-- 第二轮评论（无缝循环） -->
+          <div class="fake-comment">嗯这个观点实在太naive了</div>
+          <div class="fake-comment">你这样想真是太幼稚了哈哈</div>
+          <div class="fake-comment">不过我私底下还是挺欣赏你的，加油</div>
+          <div class="fake-comment">这话说得可真是没有任何根据</div>
+          <div class="fake-comment">你的逻辑有问题吧？</div>
+          <div class="fake-comment">哇，真是太勤快了呢</div>
+          <div class="fake-comment">这垃圾东西也能叫作品？</div>
+          <div class="fake-comment">我倒是想看看你怎么解释</div>
+          <div class="fake-comment">算了不跟你说了，太费劲</div>
+          <div class="fake-comment">你们看，又来一个呢</div>
+          <div class="fake-comment">我完全同意楼主的观点</div>
+          <div class="fake-comment">这世界真是疯狂，一切都没有意义</div>
+          <div class="fake-comment">@所有人（艾特大军）</div>
+          <div class="fake-comment">明白对方言外之意真不容易</div>
+          <div class="fake-comment">修图术真是强大啊</div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-title">你能忍受多少傻逼言论？</h1>
+        <p class="hero-subtitle">30道题 · 5分钟 · 互联网言论压力测评</p>
+        <button class="cta-button" onclick="startTest()">开始测试</button>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2>测试如何进行</h2>
+      <div class="how-it-works-grid">
+        <div class="how-it-works-card">
+          <div class="how-it-works-icon">📖</div>
+          <h3>阅读真实场景</h3>
+          <p>每题提供一个真实互联网言论场景，感受来自网友的各种言论压力</p>
+        </div>
+        <div class="how-it-works-card">
+          <div class="how-it-works-icon">🎯</div>
+          <h3>选择你的反应</h3>
+          <p>从4个反应选项中挑选最符合你的反应方式—无对错答案，只有最真实的你</p>
+        </div>
+        <div class="how-it-works-card">
+          <div class="how-it-works-icon">📊</div>
+          <h3>获得专属报告</h3>
+          <p>系统分析你的维度得分，生成人格标签和改进建议。保存结果并分享给朋友</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dimension Preview -->
+    <section class="dimension-preview">
+      <h2>6大评估维度</h2>
+      <div class="dimension-grid">
+        <div class="dimension-mini-card" style="--i: 0;">
+          <div class="dimension-mini-icon">🧠</div>
+          <div class="dimension-mini-label">总抗压力</div>
+        </div>
+        <div class="dimension-mini-card" style="--i: 1;">
+          <div class="dimension-mini-icon">📐</div>
+          <div class="dimension-mini-label">逻辑自洽</div>
+        </div>
+        <div class="dimension-mini-card" style="--i: 2;">
+          <div class="dimension-mini-icon">😌</div>
+          <div class="dimension-mini-label">情绪稳定</div>
+        </div>
+        <div class="dimension-mini-card" style="--i: 3;">
+          <div class="dimension-mini-icon">🪞</div>
+          <div class="dimension-mini-label">自我认知</div>
+        </div>
+        <div class="dimension-mini-card" style="--i: 4;">
+          <div class="dimension-mini-icon">👁️</div>
+          <div class="dimension-mini-label">读人能力</div>
+        </div>
+        <div class="dimension-mini-card" style="--i: 5;">
+          <div class="dimension-mini-icon">🔌</div>
+          <div class="dimension-mini-label">断联能力</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="home-footer">
+      <p>💡 仅供娱乐 · 结果不代表任何临床评估</p>
+      <p>© 2026 言论抗压测试 · 保护你的網絡心理健康</p>
+    </footer>
+  </div>
+
+  <script>
+    function startTest() {
+      window.location.href = 'test.html';
+    }
+
+    // 页面加载动画
+    document.addEventListener('DOMContentLoaded', function() {
+      // 如果有保存的进度，提示用户
+      const savedSession = sessionStorage.getItem('stressTestSession');
+      if (savedSession) {
+        const continueTest = confirm('检测到你有未完成的测试，要继续吗？');
+        if (continueTest) {
+          window.location.href = 'test.html';
+        } else {
+          sessionStorage.removeItem('stressTestSession');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

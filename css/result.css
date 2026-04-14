@@ -1,0 +1,472 @@
+/**
+ * 结果页样式
+ */
+
+.result-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  padding: 2rem 1rem;
+}
+
+/* ========== 等级区间 ========== */
+.level-section {
+  max-width: 800px;
+  margin: 3rem auto 4rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.level-badge {
+  background: linear-gradient(135deg, var(--bg-card), rgba(255, 71, 87, 0.1));
+  border: 2px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  box-shadow: var(--glow-red);
+}
+
+.level-emoji {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.level-label {
+  font-size: 2.5rem;
+  font-family: var(--font-display);
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+}
+
+.level-number {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.level-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ========== 雷达图区间 ========== */
+.radar-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.radar-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.radar-container {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas#radarChart {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== 人格标签卡 ========== */
+.personality-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.personality-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.personality-card {
+  background: linear-gradient(135deg, var(--bg-card), rgba(46, 213, 115, 0.05));
+  border: 2px solid var(--accent-secondary);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 0 20px rgba(46, 213, 115, 0.2);
+  transition: all var(--transition);
+}
+
+.personality-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(46, 213, 115, 0.3);
+}
+
+.personality-tag {
+  font-size: 1.8rem;
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+}
+
+.personality-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.personality-tips {
+  background: rgba(46, 213, 115, 0.1);
+  border-left: 4px solid var(--accent-secondary);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.personality-tips h4 {
+  color: var(--accent-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.personality-tips p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ========== 维度分解 ========== */
+.dimension-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.dimension-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dimension-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dimension-item {
+  animation: slideInLeft 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.dimension-item:nth-child(1) { animation-delay: 0s; }
+.dimension-item:nth-child(2) { animation-delay: 0.1s; }
+.dimension-item:nth-child(3) { animation-delay: 0.2s; }
+.dimension-item:nth-child(4) { animation-delay: 0.3s; }
+.dimension-item:nth-child(5) { animation-delay: 0.4s; }
+.dimension-item:nth-child(6) { animation-delay: 0.5s; }
+
+.dimension-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.label-text {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.label-score {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+}
+
+.dimension-bar {
+  width: 100%;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+.dimension-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.dimension-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ========== 极值分析 ========== */
+.extremes-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.extreme-card {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all var(--transition);
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.extreme-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.extreme-card.strongest {
+  background: linear-gradient(135deg, var(--bg-card), rgba(46, 213, 115, 0.05));
+  border: 2px solid var(--accent-secondary);
+}
+
+.extreme-card.strongest:hover {
+  box-shadow: var(--glow-green);
+  border-color: var(--accent-secondary);
+}
+
+.extreme-card.weakest {
+  background: linear-gradient(135deg, var(--bg-card), rgba(255, 71, 87, 0.05));
+  border: 2px solid var(--accent-primary);
+}
+
+.extreme-card.weakest:hover {
+  box-shadow: var(--glow-red);
+  border-color: var(--accent-primary);
+}
+
+.extreme-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.extreme-card.strongest .extreme-label {
+  color: var(--accent-secondary);
+}
+
+.extreme-card.weakest .extreme-label {
+  color: var(--accent-primary);
+}
+
+.extreme-score {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.extreme-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.tips-list {
+  list-style: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.tips-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ========== 分享区间 ========== */
+.share-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+.share-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.share-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+#shareText {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+#shareText:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 0;
+}
+
+/* ========== 操作按钮 ========== */
+.action-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 1.2s both;
+}
+
+.action-section a,
+.action-section button {
+  padding: 12px 32px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+/* ========== 错误容器 ========== */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-primary);
+}
+
+.error-container p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.error-container .btn-primary {
+  display: inline-block;
+}
+
+/* ========== 响应式设计 ========== */
+@media (max-width: 768px) {
+  .level-badge {
+    padding: 2rem 1.5rem;
+  }
+
+  .level-emoji {
+    font-size: 3.5rem;
+  }
+
+  .level-label {
+    font-size: 1.8rem;
+  }
+
+  .personality-tag {
+    font-size: 1.5rem;
+  }
+
+  .extremes-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dimension-section h2,
+  .radar-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .action-section {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .action-section a,
+  .action-section button {
+    width: 100%;
+  }
+
+  .radar-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .level-section {
+    margin: 2rem auto;
+  }
+
+  .level-badge {
+    padding: 1.5rem 1rem;
+  }
+
+  .level-emoji {
+    font-size: 3rem;
+  }
+
+  .level-label {
+    font-size: 1.5rem;
+  }
+
+  .level-description {
+    font-size: 0.95rem;
+  }
+
+  .personality-card,
+  .share-card {
+    padding: 1.5rem;
+  }
+
+  .personality-tag {
+    font-size: 1.2rem;
+  }
+
+  .extreme-card {
+    padding: 1.5rem;
+  }
+
+  #shareText {
+    height: 150px;
+    font-size: 0.8rem;
+  }
+
+  .action-section {
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .dimension-breakdown {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,319 @@
+/**
+ * 首页样式
+ */
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 71, 87, 0.1) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-primary), #ff6b7a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  animation: slideInRight 0.8s ease-out 0.4s both;
+}
+
+.cta-button {
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, var(--accent-primary), #ff6b7a);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+  box-shadow: var(--glow-red);
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-red), 0 12px 24px rgba(255, 71, 87, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(-2px);
+}
+
+/* ========== 滚动评论流 ========== */
+.comment-feed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fake-comments {
+  display: flex;
+  flex-direction: column;
+  animation: scrollComments 30s linear infinite;
+}
+
+@keyframes scrollComments {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.fake-comment {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 71, 87, 0.05);
+  border-left: 3px solid rgba(255, 71, 87, 0.3);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: rgba(232, 232, 240, 0.6);
+  white-space: nowrap;
+  opacity: 0.3;
+  transform: translateX(-20px);
+}
+
+/* ========== How It Works ========== */
+.how-it-works {
+  padding: 4rem 2rem;
+  background: var(--bg-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-it-works-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition);
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.how-it-works-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.how-it-works-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.how-it-works-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.how-it-works-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--glow-red);
+}
+
+.how-it-works-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.how-it-works-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--accent-primary);
+}
+
+.how-it-works-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ========== Dimension Preview ========== */
+.dimension-preview {
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dimension-preview h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dimension-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dimension-mini-card {
+  background: linear-gradient(135deg, var(--bg-card), rgba(255, 71, 87, 0.05));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition);
+  cursor: pointer;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.dimension-mini-card:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.dimension-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--bg-card), rgba(255, 71, 87, 0.1));
+}
+
+.dimension-mini-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dimension-mini-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ========== Footer ========== */
+.home-footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== 响应式设计 ========== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dimension-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fake-comment {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+
+  .how-it-works,
+  .dimension-preview {
+    padding: 2rem 1rem;
+  }
+
+  .dimension-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .dimension-mini-icon {
+    font-size: 2rem;
+  }
+
+  .dimension-mini-label {
+    font-size: 0.8rem;
+  }
+}

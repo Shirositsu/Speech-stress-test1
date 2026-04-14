@@ -1,0 +1,32 @@
+{
+  "name": "speech-stress-test",
+  "version": "1.0.0",
+  "description": "一个前端 Web 应用，帮助用户测试和分析他们对互联网言论的抗压能力",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "http-server -p 8000 -o index.html",
+    "start": "http-server -p 8000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy:vercel": "vercel",
+    "deploy:netlify": "netlify deploy"
+  },
+  "keywords": [
+    "psychology",
+    "test",
+    "stress",
+    "internet",
+    "quiz",
+    "assessment"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/speech-stress-test"
+  }
+}
